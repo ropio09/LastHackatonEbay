@@ -25,12 +25,7 @@ public class HomePage {
     public WebElement DailyDeals_Btn;
 
 
-    // Selvin's additions
-    @FindBy(xpath = "//input[@class='gh-tb ui-autocomplete-input']")
-    public WebElement search_Box_Field;
 
-    @FindBy(xpath = "//input[@class='btn btn-prim gh-spr']")
-    public WebElement search_Btn;
 
 
 

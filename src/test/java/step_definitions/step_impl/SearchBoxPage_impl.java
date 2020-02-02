@@ -21,9 +21,9 @@ public class SearchBoxPage_impl {
 
     public void getSearchBox(){
 
-        SeleniumUtils.click(homePage.search_Box_Field);
-        SeleniumUtils.sendKeys(homePage.search_Box_Field, "Phone");
-        SeleniumUtils.click(homePage.search_Btn);
+        SeleniumUtils.click(searchBoxPage.search_Box_Field);
+        SeleniumUtils.sendKeys(searchBoxPage.search_Box_Field, "Phone");
+        SeleniumUtils.click(searchBoxPage.search_Btn);
 //        SeleniumUtils.click(searchBoxPage.search_Btn);
 
 

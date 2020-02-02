@@ -27,8 +27,7 @@ public class HomePage_impl {
                 break;
 
         }
-        SeleniumUtils.click(homePage.search_Box_Field);
-        SeleniumUtils.click(homePage.search_Btn);
+
     }
 
 

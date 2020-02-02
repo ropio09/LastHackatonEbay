@@ -20,6 +20,7 @@ public class HomePage_STEPS {
     public void user_opens_home_page() {
         Driver.getDriver().get(ConfigReader.readProperty("url"));
 
+
     }
 
     @Then("Verifies title is Electronics, Cars, Fashion, Collectibles & More | eBay")
