@@ -12,12 +12,17 @@ public class HomePage {
     public HomePage(){
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(xpath = "//a[@_sp='p2481888.m1385.l3250']")
     public WebElement toys;
 
 
+     //DailyDeals
+    @FindBy(xpath = "(//a[@class='gh-p'])[1]")
+    public WebElement DailyDeals_Btn;
 
-    //changes from Selvin
+
+
 
 
     }
