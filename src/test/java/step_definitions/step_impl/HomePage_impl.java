@@ -13,9 +13,6 @@ public class HomePage_impl {
         return driver.getTitle();
     }
 
-//    public void clickMyAccountBtn(){
-//        SeleniumUtils.click(homePage.myAccount_Btn);
-//    }
 
 //    public void clickSignUp(){
 ////        clickMyAccountBtn();

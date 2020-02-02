@@ -1,7 +1,13 @@
-@homePage
-Feature: Home page Testing
+@searchBoxPage
+
+Feature: Search Testing
+
   @titleTest
-  Scenario: Verify title of Home Page
+  Scenario: Verify Search Box
     Given User opens home page
-    Then Verifies title is Electronics, Cars, Fashion, Collectibles & More | eBay
+    When User searches "Search Box"
+    And User look for "Phones"
+    Then Verify title of "cheapest phone"
+
+
 

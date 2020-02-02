@@ -5,21 +5,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import util.Driver;
-import util.SeleniumUtils;
 
-public class HomePage {
+public class SearchBoxPage {
     private static WebDriver driver = Driver.getDriver();
-    public HomePage(){
-        PageFactory.initElements(driver, this);
+
+    public SearchBoxPage(){
+
+        PageFactory.initElements(
+                driver, this);
     }
 
-    @FindBy(xpath = "//a[@href='https://www.phptravels.net/']/img")
-    public WebElement logo;
+    @FindBy(xpath = "//input[@class='gh-tb ui-autocomplete-input']")
+    public WebElement search_Box_Field;
 
-    @FindBy(xpath = "(//a[@id='dropdownCurrency'])[2]")
-    public WebElement myAccount_Btn;
-
-    //changes from Selvin
+    @FindBy(xpath = "//input[@class='btn btn-prim gh-spr']")
+    public WebElement search_Btn;
 
 
     }

@@ -13,8 +13,9 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/cucumberTestReports.json",
         },
-        tags = {"@homePage"},
+        tags = {"@DailyPage"},
         dryRun = false
 )
-public class HomePage_Runner {
+
+public class DailyDeals_Runner {
 }

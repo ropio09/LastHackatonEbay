@@ -1,29 +1,43 @@
 package step_definitions;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.eo.Se;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
+import pages.SearchBoxPage;
 import step_definitions.step_impl.HomePage_impl;
-import util.ConfigReader;
+import step_definitions.step_impl.SearchBoxPage_impl;
 import util.Driver;
 import util.SeleniumUtils;
 
-public class HomePage_STEPS {
+public class SearchBoxPage_STEPS {
     private static WebDriver driver = Driver.getDriver();
     HomePage homePage = new HomePage();
-    HomePage_impl homePage_impl= new HomePage_impl();
+    SearchBoxPage_impl searchBoxPage_impl = new SearchBoxPage_impl();
+    SearchBoxPage searchBoxPage = new SearchBoxPage();
 
-    @Given("User opens home page")
-    public void user_opens_home_page() {
-        Driver.getDriver().get(ConfigReader.readProperty("url"));
+
+    @When("User searches {string}")
+    public void user_searches(String string) {
+        SeleniumUtils.click(searchBoxPage.search_Box_Field);
     }
 
-    @Then("Verifies title is Electronics, Cars, Fashion, Collectibles & More | eBay")
-    public void verifies_title_is_Electronics_Cars_Fashion_Collectibles_More_eBay() {
-   Assert.assertEquals( "Electronics, Cars, Fashion, Collectibles & More | eBay", driver.getTitle() );
+    @When("User look for {string}")
+    public void user_look_for(String string) {
+        searchBoxPage_impl.getSearchBox();
+        searchBoxPage_impl.getListOfPhones();
+
+
     }
+
+    @Then("Verify title of {string}")
+    public void verify_title_of(String string) {
+        Assert.assertTrue("39.23", true);
+
+    }
+
+
 
 }
