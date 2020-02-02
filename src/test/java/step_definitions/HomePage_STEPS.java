@@ -26,6 +26,4 @@ public class HomePage_STEPS {
    Assert.assertEquals( "Electronics, Cars, Fashion, Collectibles & More | eBay", driver.getTitle() );
     }
 
-    //Comments from Me
-
 }
