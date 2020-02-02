@@ -13,11 +13,7 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[@href='https://www.phptravels.net/']/img")
-    public WebElement logo;
 
-    @FindBy(xpath = "(//a[@id='dropdownCurrency'])[2]")
-    public WebElement myAccount_Btn;
 
     //changes from Selvin
 
