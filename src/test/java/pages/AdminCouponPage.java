@@ -15,44 +15,5 @@ public class AdminCouponPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//div[@class='add_button_modal']")
-    public WebElement addNewCoupon_Btn;
-
-    @FindBy(xpath = "//select[@name='status']")
-    public WebElement status_field;
-
-    @FindBy(xpath = "//input[@placeholder='Percentage']")
-    public WebElement percentage_field;
-    //String percentage = "Percentage";
-
-    @FindBy(xpath = "//input[@placeholder='Maximum Uses']")
-    public WebElement maxUses_field;
-
-    @FindBy(xpath = "//input[@placeholder='Start Date']")
-    public WebElement startDate_field;
-
-    @FindBy(xpath = "//input[@placeholder='Expiration Date']")
-    public WebElement endDate_field;
-
-    @FindBy(xpath = "//input[@value='tours']")
-    public WebElement tours_checkBox;
-
-    @FindBy(xpath = "//input[@value='cars']")
-    public WebElement cars_checkBox;
-
-    @FindBy(xpath = "//input[@placeholder='Coupon Code']")
-    public WebElement codeInput_field;
-
-    @FindBy(xpath = "//button[text()=' Submit']")
-    public WebElement submit_Btn;
-
-    @FindBy(xpath = "(//tr[contains(@class,'xcrud-row xcrud-row')])/td[4]")
-    public List<WebElement> allCouponCodes;
-
-    @FindBy(xpath = "//a[@title='Remove']")
-    public WebElement removeCoupon_Btn;
-
-    public String allCouponsCodes_XPATH = "(//tr[contains(@class,'xcrud-row xcrud-row')])/td[4]";
-
 
 }

@@ -13,26 +13,4 @@ public class AdminPage_impl {
     private String password= ConfigReader.readProperty("passw");
 
 
-    public void loginUser(){
-        SeleniumUtils.sendKeys(adminPage.email, login);
-        SeleniumUtils.sendKeys(adminPage.password, password);
-        clickSignUp();
-    }
-
-    public void clickSignUp(){
-        SeleniumUtils.click(adminPage.login_Btn);
-    }
-
-    public String getTitle(){
-        return driver.getTitle();
-    }
-
-    public void navigateToPage(String pageName){
-        switch (pageName.toLowerCase()){
-            case "coupons":
-                SeleniumUtils.click(adminPage.coupons_Btn);
-                break;
-        }
-    }
-
 }

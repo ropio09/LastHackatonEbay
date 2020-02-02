@@ -19,31 +19,9 @@ public class HomePage {
     @FindBy(xpath = "(//a[@id='dropdownCurrency'])[2]")
     public WebElement myAccount_Btn;
 
-    @FindBy(xpath = "//a[text()='Sign Up']")
-    public WebElement signUp_Btn;
-
-    @FindBy(xpath = "//a[text()='Login']")
-    public WebElement logIn_Btn;
-
-    @FindBy (xpath = "//div[@class='container']//div[1]//figure[1]//a[1]")
-    public WebElement firstFeaturedTour;
+    //changes from Selvin
 
 
-    public void rand(){
-        logo.sendKeys();
     }
 
-    public String getTitle(){
-        return driver.getTitle();
-    }
 
-    public void clickMyAccountBtn(){
-        SeleniumUtils.click(myAccount_Btn);
-    }
-
-    public void clickSignUp(){
-        clickMyAccountBtn();
-        SeleniumUtils.click(signUp_Btn);
-    }
-
-}

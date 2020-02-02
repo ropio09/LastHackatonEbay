@@ -12,18 +12,7 @@ public class AdminPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//input[@name='email']")
-    public WebElement email;
 
-    @FindBy(xpath = "//input[@name='password']")
-    public WebElement password;
-
-
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement login_Btn;
-
-    @FindBy (xpath = "//a[contains(text(),'Coupons')]")
-    public WebElement coupons_Btn;
 
 
 }
