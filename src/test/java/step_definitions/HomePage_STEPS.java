@@ -21,18 +21,18 @@ public class HomePage_STEPS {
         Driver.getDriver().get(ConfigReader.readProperty("url"));
     }
 
-    @When("User sees My Account button")
-    public void user_sees_My_Account_button() {
-        SeleniumUtils.waitForVisibilityOfElement(homePage.myAccount_Btn);
+    @Then("Verifies title is Electronics, Cars, Fashion, Collectibles & More | eBay")
+    public void verifies_title_is_Electronics_Cars_Fashion_Collectibles_More_eBay() {
+   Assert.assertEquals( "Electronics, Cars, Fashion, Collectibles & More | eBay", driver.getTitle() );
     }
 
-    @Then("Verifies title is PHPTRAVELS | Travel Technology Partner")
-    public void verifies_title_is_PHPTRAVELS_Travel_Technology_Partner() {
-        Assert.assertEquals("PHPTRAVELS | Travel Technology Partner", driver.getTitle());
-    }
+//    @Then("Verifies title is PHPTRAVELS | Travel Technology Partner")
+//    public void verifies_title_is_PHPTRAVELS_Travel_Technology_Partner() {
+//        Assert.assertEquals("PHPTRAVELS | Travel Technology Partner", driver.getTitle());
+//    }
 
-    @When("User opens {string} featured tour")
-    public void user_opens_featured_tour(String string) {
-        homePage_impl.openFeaturedTour(string);
-    }
+//    @When("User opens {string} featured tour")
+//    public void user_opens_featured_tour(String string) {
+//        homePage_impl.openFeaturedTour(string);
+//    }
 }

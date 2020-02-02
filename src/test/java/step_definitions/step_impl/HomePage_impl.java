@@ -13,22 +13,22 @@ public class HomePage_impl {
         return driver.getTitle();
     }
 
-    public void clickMyAccountBtn(){
-        SeleniumUtils.click(homePage.myAccount_Btn);
-    }
+//    public void clickMyAccountBtn(){
+//        SeleniumUtils.click(homePage.myAccount_Btn);
+//    }
 
-    public void clickSignUp(){
-        clickMyAccountBtn();
-        SeleniumUtils.click(homePage.signUp_Btn);
-    }
-
-    public void openFeaturedTour(String name){
-        switch (name.toLowerCase()){
-            case "first tour": SeleniumUtils.click(homePage.firstFeaturedTour);
-                break;
-            case "last tour":
-        }
-    }
+//    public void clickSignUp(){
+////        clickMyAccountBtn();
+////        SeleniumUtils.click(homePage.signUp_Btn);
+////    }
+//
+//    public void openFeaturedTour(String name){
+//        switch (name.toLowerCase()){
+//            case "first tour": SeleniumUtils.click(homePage.firstFeaturedTour);
+//                break;
+//            case "last tour":
+//        }
+//    }
 
 
 }
