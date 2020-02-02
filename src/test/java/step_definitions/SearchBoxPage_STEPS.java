@@ -31,7 +31,6 @@ public class SearchBoxPage_STEPS {
         searchBoxPage_impl.getSearchBox();
         searchBoxPage_impl.getListOfPhones();
 
-
     }
 
     @Then("Verify title of {string}")
