@@ -18,11 +18,6 @@ public class toysPage_STEPS {
     toysPage_impl tp_impl= new toysPage_impl();
     toysPage tp =new toysPage();
 
-    @Given("User opens home page")
-    public void user_opens_home_page() {
-        Driver.getDriver().get(ConfigReader.readProperty("url"));
-    }
-
 
     @When("User selects {string} from featured items selection")
     public void user_selects_from_featured_items_selection(String string) {
