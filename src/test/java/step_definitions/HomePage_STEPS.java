@@ -26,13 +26,6 @@ public class HomePage_STEPS {
    Assert.assertEquals( "Electronics, Cars, Fashion, Collectibles & More | eBay", driver.getTitle() );
     }
 
-//    @Then("Verifies title is PHPTRAVELS | Travel Technology Partner")
-//    public void verifies_title_is_PHPTRAVELS_Travel_Technology_Partner() {
-//        Assert.assertEquals("PHPTRAVELS | Travel Technology Partner", driver.getTitle());
-//    }
+    //Comments from Me
 
-//    @When("User opens {string} featured tour")
-//    public void user_opens_featured_tour(String string) {
-//        homePage_impl.openFeaturedTour(string);
-//    }
 }
