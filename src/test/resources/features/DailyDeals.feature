@@ -5,10 +5,10 @@ Feature: Daily Deals page Testing
     Given User opens home page
     When User clicks on "Daily Deals"
     Then Verifies title is  "FEATURED DEALS" text
-    When User selects "Microsoft Surface Book 13.5in Touchscreen Intel i5-6300U 128GB SSD 8GB Win 10"
+    When User selects "Samsung Galaxy Tab S5e 10.5\" 128GB Black SM-T720NZKCXAR 2019 AMOLED + 128GB SD"
     And Clicks on "Add to card" button
     And Clicks "Go to Cart" button
-    Then Verify total price is "$529.00"
+    Then Verify total price is "$328.49"
 
 
 

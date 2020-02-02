@@ -17,7 +17,7 @@ public class DailyDealsPage {
     public WebElement text_ver;
 
 
-    @FindBy(xpath = "//h3[@title='Microsoft Surface Book 13.5in Touchscreen Intel i5-6300U 128GB SSD 8GB Win 10']")
+    @FindBy(xpath = "(//span[contains (text(), 'Samsung')])[2]")
     public WebElement firstItem_Btn;
 
     @FindBy(xpath = "//a[@id='isCartBtn_btn']")
@@ -28,6 +28,17 @@ public class DailyDealsPage {
 
     @FindBy(xpath = "//td[@class='val-col total-row']")
     public  WebElement totalPrice_ver;
+
+
+//    @FindBy(xpath = "//div[@id='gh-ac-box2']")
+//    public  WebElement search_box;
+//
+//    @FindBy(xpath = "//input[@id='gh-btn']")
+//    public  WebElement search_Btn;
+
+
+
+
 
 
 
