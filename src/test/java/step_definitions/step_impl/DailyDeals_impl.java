@@ -31,6 +31,7 @@ public class DailyDeals_impl {
     }
 
     public  void  verTotal(){
+
         SeleniumUtils.getText(DealsPage.totalPrice_ver);
 }
 

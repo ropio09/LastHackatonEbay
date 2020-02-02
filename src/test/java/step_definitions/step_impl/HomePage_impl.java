@@ -19,8 +19,9 @@ public class HomePage_impl {
             case "toys":
                 SeleniumUtils.click(homePage.toys);
                 break;
-            case "dailyDeals":
+            case "daily deals":
                 SeleniumUtils.click(homePage.DailyDeals_Btn);
+                break;
             case "Help & Contact":
                 SeleniumUtils.click( homePage.contactBtn);
 
