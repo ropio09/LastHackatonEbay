@@ -9,17 +9,28 @@ import util.SeleniumUtils;
 
 public class HomePage {
     private static WebDriver driver = Driver.getDriver();
+
     public HomePage(){
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[@href='https://www.phptravels.net/']/img")
-    public WebElement logo;
+    @FindBy(xpath = "//a[@_sp='p2481888.m1385.l3250']")
+    public WebElement toys;
 
-    @FindBy(xpath = "(//a[@id='dropdownCurrency'])[2]")
-    public WebElement myAccount_Btn;
+    @FindBy(id="gh-p-3")
+    public WebElement contactBtn;
 
-    //changes from Selvin
+
+
+
+
+
+     //DailyDeals
+    @FindBy(xpath = "(//a[@class='gh-p'])[1]")
+    public WebElement DailyDeals_Btn;
+
+
+
 
 
 

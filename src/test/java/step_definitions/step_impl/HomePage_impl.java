@@ -2,6 +2,7 @@ package step_definitions.step_impl;
 
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
+import pages.toysPage;
 import util.Driver;
 import util.SeleniumUtils;
 
@@ -13,19 +14,18 @@ public class HomePage_impl {
         return driver.getTitle();
     }
 
+    public void clickItem(String name) {
+        switch (name.toLowerCase()) {
+            case "toys":
+                SeleniumUtils.click(homePage.toys);
+                break;
+            case "dailyDeals":
+                SeleniumUtils.click(homePage.DailyDeals_Btn);
+            case "Help & Contact":
+                SeleniumUtils.click( homePage.contactBtn);
 
-//    public void clickSignUp(){
-////        clickMyAccountBtn();
-////        SeleniumUtils.click(homePage.signUp_Btn);
-////    }
-//
-//    public void openFeaturedTour(String name){
-//        switch (name.toLowerCase()){
-//            case "first tour": SeleniumUtils.click(homePage.firstFeaturedTour);
-//                break;
-//            case "last tour":
-//        }
-//    }
+        }
+    }
 
 
 }

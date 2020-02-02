@@ -24,6 +24,13 @@ public class HomePage_STEPS {
     @Then("Verifies title is Electronics, Cars, Fashion, Collectibles & More | eBay")
     public void verifies_title_is_Electronics_Cars_Fashion_Collectibles_More_eBay() {
    Assert.assertEquals( "Electronics, Cars, Fashion, Collectibles & More | eBay", driver.getTitle() );
+
     }
+
+    @Given("User clicks on {string}")
+    public void user_clicks_on(String string) {
+        homePage_impl.clickItem(string);
+    }
+
 
 }
