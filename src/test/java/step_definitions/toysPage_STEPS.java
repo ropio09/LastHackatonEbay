@@ -28,8 +28,7 @@ public class toysPage_STEPS {
 
     @Then("User verifies items on first page with {string} or more discount")
     public void user_verifies_items_on_first_page_with_or_more_discount(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+
     }
 
 

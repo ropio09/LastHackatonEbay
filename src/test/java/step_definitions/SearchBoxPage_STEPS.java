@@ -21,7 +21,9 @@ public class SearchBoxPage_STEPS {
 
     @When("User searches {string}")
     public void user_searches(String string) {
-        SeleniumUtils.click(searchBoxPage.search_Box_Field);
+        SeleniumUtils.click(homePage.search_Box_Field);
+        SeleniumUtils.click(homePage.search_Btn);
+        //SeleniumUtils.click(searchBoxPage.search_Box_Field);
     }
 
     @When("User look for {string}")

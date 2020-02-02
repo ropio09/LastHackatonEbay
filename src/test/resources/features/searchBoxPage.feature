@@ -2,7 +2,7 @@
 
 Feature: Search Testing
 
-  @titleTest
+  @smokeTest
   Scenario: Verify Search Box
     Given User opens home page
     When User searches "Search Box"

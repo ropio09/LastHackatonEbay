@@ -26,6 +26,8 @@ public class HomePage_impl {
                 SeleniumUtils.click( homePage.contactBtn);
 
         }
+        SeleniumUtils.click(homePage.search_Box_Field);
+        SeleniumUtils.click(homePage.search_Btn);
     }
 
 

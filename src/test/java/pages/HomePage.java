@@ -20,20 +20,24 @@ public class HomePage {
     @FindBy(id="gh-p-3")
     public WebElement contactBtn;
 
-
-
-
-
-
      //DailyDeals
     @FindBy(xpath = "(//a[@class='gh-p'])[1]")
     public WebElement DailyDeals_Btn;
 
 
+    // Selvin's additions
+    @FindBy(xpath = "//input[@class='gh-tb ui-autocomplete-input']")
+    public WebElement search_Box_Field;
+
+    @FindBy(xpath = "//input[@class='btn btn-prim gh-spr']")
+    public WebElement search_Btn;
 
 
 
 
-    }
+
+
+
+}
 
 
