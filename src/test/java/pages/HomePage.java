@@ -14,7 +14,7 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[@_sp='p2481888.m1385.l3250']")
+    @FindBy(xpath = "//li[@data-hover-track='p2481888.m1385.l6435']")
     public WebElement toys;
 
     @FindBy(id="gh-p-3")

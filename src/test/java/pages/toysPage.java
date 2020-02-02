@@ -15,7 +15,7 @@ public class toysPage {
     @FindBy(xpath = "(*//a[@_sp='p2489527.m4891.l9598'])[9]")
     public WebElement allToyDeals;
 
-    @FindBy(xpath = "//div[@_sp='p2380779.m4399.l3']")
+    @FindBy(xpath = "(//div[@role='navigation']//button)[4]")
     public WebElement featuredItems;
 
 

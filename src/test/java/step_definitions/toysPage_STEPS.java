@@ -19,16 +19,21 @@ public class toysPage_STEPS {
     toysPage tp =new toysPage();
 
 
+    @Given("User clicks the {string}")
+    public void user_clicks_the(String string) {
+        tp_impl.clickAllToysDeals(string);
+    }
+
     @When("User selects {string} from featured items selection")
     public void user_selects_from_featured_items_selection(String string) {
-        tp_impl.clickAllToysDeals(string);
-        SeleniumUtils.sleep(2000);
-        tp_impl.selectHighPrice();
+        SeleniumUtils.click(tp.featuredItems);
+        SeleniumUtils.sleep(1000);
+        tp_impl.selectHighPrice(string);
     }
 
     @Then("User verifies items on first page with {string} or more discount")
     public void user_verifies_items_on_first_page_with_or_more_discount(String string) {
-
+        tp_impl.moreDiscount();
     }
 
 

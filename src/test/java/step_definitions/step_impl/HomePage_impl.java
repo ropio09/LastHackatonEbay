@@ -22,11 +22,12 @@ public class HomePage_impl {
             case "daily deals":
                 SeleniumUtils.click(homePage.DailyDeals_Btn);
                 break;
-            case "help & contact":
+            case "Help & Contact":
                 SeleniumUtils.click( homePage.contactBtn);
-                break;
 
         }
+//        SeleniumUtils.click(homePage.search_Box_Field);
+//        SeleniumUtils.click(homePage.search_Btn);
     }
 
 
