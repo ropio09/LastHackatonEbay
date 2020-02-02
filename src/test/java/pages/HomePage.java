@@ -12,6 +12,8 @@ public class HomePage {
     public HomePage(){
         PageFactory.initElements(driver, this);
     }
+    @FindBy(xpath = "//a[@_sp='p2481888.m1385.l3250']")
+    public WebElement toys;
 
 
 
