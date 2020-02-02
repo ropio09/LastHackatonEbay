@@ -19,7 +19,8 @@ public class toysPage {
     public WebElement featuredItems;
 
 
-    @FindBy(xpath = "//a[@title='Price: highest first']")
+    @FindBy(xpath = "//ul[@role='menu']//li[@data-selected-type='3']")
+            //"(//li[@role='menuitem'])[3]")
     public WebElement highPriceFirst;
 
 

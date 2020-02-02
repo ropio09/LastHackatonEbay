@@ -26,8 +26,8 @@ public class toysPage_STEPS {
 
     @When("User selects {string} from featured items selection")
     public void user_selects_from_featured_items_selection(String string) {
-        SeleniumUtils.click(tp.featuredItems);
-        SeleniumUtils.sleep(1000);
+        tp_impl.selectFeatured();
+//    SeleniumUtils.sleep(1000);
         tp_impl.selectHighPrice(string);
     }
 

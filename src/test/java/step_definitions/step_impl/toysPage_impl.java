@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.HomePage;
 import pages.toysPage;
 import util.Driver;
@@ -30,37 +31,44 @@ public class toysPage_impl {
     }
 
 
+    public void selectFeatured(){
+        SeleniumUtils.click(tp.featuredItems);
+
+    }
+
     public void selectHighPrice(String name) {
         switch (name.toLowerCase()) {
             case "Price: highest first":
-                SeleniumUtils.click(tp.highPriceFirst);
-//                System.out.println("--------> "+tp.highPriceFirst);
+                Select selectPrice= new Select(tp.highPriceFirst);
+                selectPrice.selectByVisibleText("3");
+//                SeleniumUtils.click(tp.highPriceFirst);
                 break;
         }
     }
 
+
     public void moreDiscount() {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("window.scrollBy(0,450)");
+        jse.executeScript("window.scrollBy(0,3000)");
+
 
         WebElement Elmnt = driver.findElement(By.xpath("(//div[@class='dne-itemtile dne-itemtile-large'])[72]"));
         Actions actions = new Actions(driver);
         actions.moveToElement(Elmnt);
         actions.perform();
 
-        List<WebElement> hotelList = driver.findElements(By.xpath("//div[@class='dne-itemtile-detail']"));
-        System.out.println(hotelList.size());
-        /*
-        for(WebElement e: hotelList){
+        List<WebElement> nameList = driver.findElements(By.xpath("//div[@class='dne-itemtile-detail']"));
+        System.out.println(nameList.size());
+
+        for(WebElement e: nameList){
             System.out.println(e.getText());
         }
 
         Map<String, Integer> discountsMap = new HashMap<>();
         Map<String, Integer> pricesMap = new HashMap<>();
 
-        for(WebElement element: hotelList) {
+        for(WebElement element: nameList) {
             String itemName = element.findElement(By.xpath("//span[@itemprop='name']")).getText();
-//            String price = element.findElement(By.xpath(".//span[@data-stid='content-hotel-lead-price']")).getText();
 
             String discount = "No discount";
             try {
@@ -75,7 +83,7 @@ public class toysPage_impl {
 
         }
         System.out.println("=====================  Discounts  ===================");
-        discountsMap.forEach((K, V) -> System.out.println("Hotel name: " + K + " | Discount amount: " + V + "%"));
+        discountsMap.forEach((K, V) -> System.out.println("Item name: " + K + " | Discount amount: " + V + "%"));
 
 
         System.out.println("===============     FINAL   ===============");
@@ -106,8 +114,8 @@ public class toysPage_impl {
 //        return Integer.parseInt(price.substring(1));
 //    }
 
-*/
-    }
+
+
 }
 
 
