@@ -27,7 +27,6 @@ public class HomePage_impl {
                 break;
 
         }
-
     }
 
 
