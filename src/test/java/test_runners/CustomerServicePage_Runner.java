@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                 //"json:target/cucumber-reports/cucumberTestReports.json",
         },
         tags = {"@helpContactPage"},
-        dryRun = true
+        dryRun = false
 )
 
 public class CustomerServicePage_Runner {
