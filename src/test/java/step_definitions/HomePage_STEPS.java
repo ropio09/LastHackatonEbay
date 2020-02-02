@@ -26,4 +26,9 @@ public class HomePage_STEPS {
    Assert.assertEquals( "Electronics, Cars, Fashion, Collectibles & More | eBay", driver.getTitle() );
     }
 
+    @Given("User clicks on {string}")
+    public void user_clicks_on(String string) {
+        homePage_impl.clickItem(string);
+    }
+
 }

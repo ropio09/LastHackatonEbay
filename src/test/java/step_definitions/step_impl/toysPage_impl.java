@@ -8,7 +8,6 @@ import util.SeleniumUtils;
 
 public class toysPage_impl {
     private static WebDriver driver = Driver.getDriver();
-    HomePage homePage= new HomePage();
     toysPage tp= new toysPage();
 
     public void clickAllToysDeals(String name){
@@ -20,9 +19,13 @@ public class toysPage_impl {
 
     public void selectHighPrice(){
         SeleniumUtils.click(tp.featuredItems);
+        SeleniumUtils.sleep(2000);
         SeleniumUtils.click(tp.highPriceFirst);
     }
 
+    public void moreDiscount (){
+
+    }
 
 
 

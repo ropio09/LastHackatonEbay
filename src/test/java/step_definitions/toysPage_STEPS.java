@@ -2,11 +2,13 @@ package step_definitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.toysPage;
 import step_definitions.step_impl.HomePage_impl;
 import step_definitions.step_impl.toysPage_impl;
+import util.ConfigReader;
 import util.Driver;
 import util.SeleniumUtils;
 
@@ -16,15 +18,17 @@ public class toysPage_STEPS {
     toysPage_impl tp_impl= new toysPage_impl();
     toysPage tp =new toysPage();
 
-    @Given("User clicks on {string}")
-    public void user_clicks_on(String string) {
-        homePage_impl.clickItem(string);
+    @Given("User opens home page")
+    public void user_opens_home_page() {
+        Driver.getDriver().get(ConfigReader.readProperty("url"));
     }
 
-    @Given("User selects {string} from featured items selection")
+
+    @When("User selects {string} from featured items selection")
     public void user_selects_from_featured_items_selection(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        tp_impl.clickAllToysDeals(string);
+        SeleniumUtils.sleep(2000);
+        tp_impl.selectHighPrice();
     }
 
     @Then("User verifies items on first page with {string} or more discount")

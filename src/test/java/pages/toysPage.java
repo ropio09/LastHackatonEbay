@@ -21,4 +21,8 @@ public class toysPage {
 
     @FindBy(xpath = "//a[@title='Price: highest first']")
     public WebElement highPriceFirst;
+
+
 }
+
+
