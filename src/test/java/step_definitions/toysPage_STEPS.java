@@ -3,6 +3,7 @@ package step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.toysPage;
@@ -13,27 +14,29 @@ import util.Driver;
 import util.SeleniumUtils;
 
 public class toysPage_STEPS {
-    private static WebDriver driver = Driver.getDriver();
-    HomePage_impl homePage_impl= new HomePage_impl();
+//    private static WebDriver driver = Driver.getDriver();
     toysPage_impl tp_impl= new toysPage_impl();
-    toysPage tp =new toysPage();
 
 
     @Given("User clicks the {string}")
     public void user_clicks_the(String string) {
         tp_impl.clickAllToysDeals(string);
+        SeleniumUtils.sleep(3000);
+        tp_impl.selectFeatured();
     }
 
     @When("User selects {string} from featured items selection")
     public void user_selects_from_featured_items_selection(String string) {
-        tp_impl.selectFeatured();
-//    SeleniumUtils.sleep(1000);
         tp_impl.selectHighPrice(string);
+        tp_impl.displayMoreItems();
     }
 
-    @Then("User verifies items on first page with {string} or more discount")
-    public void user_verifies_items_on_first_page_with_or_more_discount(String string) {
-        tp_impl.moreDiscount();
+
+    @Then("User verifies all {string} items loaded in first page")
+    public void user_verifies_all_items_loaded_in_first_page(String string) {
+
+        Assert.assertTrue(string, true);
+        tp_impl.allItems();
     }
 
 

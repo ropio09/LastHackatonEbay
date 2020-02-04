@@ -6,4 +6,4 @@ Feature: Going to Toys deals
     And User clicks on "toys"
     And User clicks the "shop all toy deals"
     And User selects "Price: highest first" from featured items selection
-    Then User verifies items on first page with "50%" or more discount
+    Then User verifies all "72" items loaded in first page

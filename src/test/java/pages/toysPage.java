@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import util.Driver;
 
+import java.util.List;
+
 public class toysPage {
     private static WebDriver driver = Driver.getDriver();
     public toysPage(){
@@ -19,9 +21,18 @@ public class toysPage {
     public WebElement featuredItems;
 
 
-    @FindBy(xpath = "//ul[@role='menu']//li[@data-selected-type='3']")
-            //"(//li[@role='menuitem'])[3]")
+    @FindBy(xpath = "//a[@title='Price: highest first']")
     public WebElement highPriceFirst;
+
+    @FindBy(xpath = "(//div[@class='dne-itemtile dne-itemtile-large'])[72]")
+    public WebElement lastItem;
+
+    @FindBy(xpath = "//span[@itemprop='name']")
+    public List<WebElement> item;
+
+
+
+
 
 
 }

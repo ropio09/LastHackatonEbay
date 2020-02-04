@@ -13,6 +13,7 @@ import util.Driver;
 import util.SeleniumUtils;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -38,85 +39,41 @@ public class toysPage_impl {
 
     public void selectHighPrice(String name) {
         switch (name.toLowerCase()) {
-            case "Price: highest first":
-                Select selectPrice= new Select(tp.highPriceFirst);
-                selectPrice.selectByVisibleText("3");
-//                SeleniumUtils.click(tp.highPriceFirst);
+            case "price: highest first":
+                WebElement highPrice = tp.highPriceFirst;
+                Actions actions = new Actions(driver);
+                actions.moveToElement(highPrice);
+                actions.click();
+                actions.perform();
+
                 break;
         }
     }
 
 
-    public void moreDiscount() {
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("window.scrollBy(0,3000)");
+    public void displayMoreItems() {
+        SeleniumUtils.sleep(3000);
+        JavascriptExecutor scroll = (JavascriptExecutor) driver;
+        scroll.executeScript("window.scrollBy(0,3000)");
 
-
-        WebElement Elmnt = driver.findElement(By.xpath("(//div[@class='dne-itemtile dne-itemtile-large'])[72]"));
+        WebElement lastItem = tp.lastItem;
         Actions actions = new Actions(driver);
-        actions.moveToElement(Elmnt);
+        actions.moveToElement(lastItem);
         actions.perform();
+    }
 
-        List<WebElement> nameList = driver.findElements(By.xpath("//div[@class='dne-itemtile-detail']"));
-        System.out.println(nameList.size());
+    public void allItems(){
+        List<WebElement> nameList = tp.item;
+        System.out.println("number of items after done loading: "+nameList.size());
+    }
 
-        for(WebElement e: nameList){
-            System.out.println(e.getText());
-        }
-
-        Map<String, Integer> discountsMap = new HashMap<>();
-        Map<String, Integer> pricesMap = new HashMap<>();
-
-        for(WebElement element: nameList) {
-            String itemName = element.findElement(By.xpath("//span[@itemprop='name']")).getText();
-
-            String discount = "No discount";
-            try {
-                discount = element.findElement(By.xpath("//span[@class='itemtile-price-bold']")).getText();
-            }catch (Exception e){ }
-
-            int actualDiscount = convertDiscount(discount);
-
-
-            if (actualDiscount > 50)
-                discountsMap.put(itemName, actualDiscount);
-
-        }
-        System.out.println("=====================  Discounts  ===================");
-        discountsMap.forEach((K, V) -> System.out.println("Item name: " + K + " | Discount amount: " + V + "%"));
-
-
-        System.out.println("===============     FINAL   ===============");
-        for(String itemName: discountsMap.keySet()){
-            if(discountsMap.containsKey(itemName) && pricesMap.containsKey(itemName)){
-                if (discountsMap.get(itemName) > 50)
-                    System.out.println(itemName + " | Price: " + pricesMap.get(itemName) + " | Discount: " + discountsMap.get(itemName));
-            }
-        }
-        driver.quit();
 
     }
 
 
-    static int convertDiscount(String discount){
-        int actualDiscount=0;
-        if (discount.contains("%")){
-            if (discount.length() < 8){
-                actualDiscount = Integer.parseInt(discount.substring(0,discount.indexOf("%")));
-            }else {
-                actualDiscount = Integer.parseInt(discount.substring(discount.indexOf("%") - 2, discount.indexOf("%")).trim());
-            }
-        }
-        return actualDiscount;
-    }
-
-//    static int convertPrice(String price){
-//        return Integer.parseInt(price.substring(1));
-//    }
 
 
 
-}
 
 
 
