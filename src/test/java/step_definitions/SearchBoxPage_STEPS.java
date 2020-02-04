@@ -21,21 +21,19 @@ public class SearchBoxPage_STEPS {
 
     @When("User searches {string}")
     public void user_searches(String string) {
-        SeleniumUtils.click(searchBoxPage.search_Box_Field);
-        SeleniumUtils.click(searchBoxPage.search_Btn);
-        //SeleniumUtils.click(searchBoxPage.search_Box_Field);
+        searchBoxPage_impl.getSearchBox();
+
     }
 
     @When("User look for {string}")
     public void user_look_for(String string) {
-        searchBoxPage_impl.getSearchBox();
         searchBoxPage_impl.getListOfPhones();
 
     }
 
     @Then("Verify title of {string}")
-    public void verify_title_of(String string) {
-        Assert.assertTrue("39.23", true);
+    public void verify_title_of(String expected) {
+        Assert.assertTrue(expected, true);
 
     }
 

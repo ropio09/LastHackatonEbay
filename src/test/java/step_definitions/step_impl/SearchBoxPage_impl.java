@@ -20,11 +20,9 @@ public class SearchBoxPage_impl {
 
 
     public void getSearchBox(){
-
         SeleniumUtils.click(searchBoxPage.search_Box_Field);
         SeleniumUtils.sendKeys(searchBoxPage.search_Box_Field, "Phone");
         SeleniumUtils.click(searchBoxPage.search_Btn);
-//        SeleniumUtils.click(searchBoxPage.search_Btn);
 
 
     }
@@ -41,13 +39,9 @@ public class SearchBoxPage_impl {
         Collections.sort(dPrices);
         System.out.println("The cheapest is:");
         System.out.println(dPrices.get(0));
-        double expected = 39.23;
+
 
     }
-
-
-
-
 
 
 }

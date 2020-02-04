@@ -16,6 +16,7 @@ public class CustomerServicePage_impl {
     CustomerServicePage customerPage = new CustomerServicePage();
 
     public void clickMyAccountBtn(){
+
         SeleniumUtils.click(homePage.contactBtn);
     }
 
